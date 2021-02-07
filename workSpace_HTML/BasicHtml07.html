@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .container {
+            border: 1px solid black;
+            width:
+
+        }
+        .header{
+            width : 100%;
+            text-align: center;
+            background: #3056a0;
+            color: #ffff;
+            line-height :70px;
+            font-size: 3em;
+        }
+        .tbody div {
+            border: 1px solid black;
+            margin-top: 1%;
+            width: 98%;
+            padding :1px 2px 3px 4px ;
+            display:  block;
+            margin: 2% auto;
+        }
+        table {
+            text-align: center;
+            border: 1px solid black;
+            width :90%;
+            margin : 0 auto;
+            border-collapse: collapse;
+        }
+        table caption {
+            font-weight: bold;
+        }
+        table thead {
+            background: #3056a0;
+            color : #ffffff;
+            font-weight: 700;
+        }
+        table tr, td, th {
+            border :1px solid black;
+        }
+        table tr:nth-child(2n){
+            background: #E6E6F5;
+        }
+        .tfooter {
+            background:  #3056a0;
+            text-align: center;
+            line-height :40px;
+            color: #ffffff;
+        }
+
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            Title
+        </div>
+        <div class="tbody">
+            <div class="col1">
+                <h2>Content Detail</h2>
+            </div>
+            <div class="col2">
+                <table>
+                    <caption>Table Information</caption> 
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Address</th>
+                                <th>Birth</th>
+                                <th>Job</th>
+                                <th>Age</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>김수철</td>    
+                                <td>서울특별시</td> 
+                                <td>1990-12-21</td>   
+                                <td>개발자1</td>   
+                                <td>32</td>   
+                            </tr>
+                            <tr>
+                                <td>김영희</td>    
+                                <td>울산광역시</td> 
+                                <td>1990-12-21</td>   
+                                <td>개발자1</td>   
+                                <td>32</td>   
+                            </tr>
+                            <tr>
+                                <td>김철호</td>    
+                                <td>부산광역시</td> 
+                                <td>1990-12-21</td>   
+                                <td>개발자1</td>   
+                                <td>32</td>   
+                            </tr>   
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="5">Table Foot</td>
+                            </tr>
+                        </tfoot>
+                </table>  
+
+            </div>
+        </div>
+        
+        <div class="tfooter">
+            CopyRight 2021
+        </div>
+    </div>
+</body>
+</html>

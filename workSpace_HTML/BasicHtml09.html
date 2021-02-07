@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        label {
+            width: 165px;
+            display: inline-block;
+             vertical-align: top;
+        }
+        input {
+            width:200px;
+        }
+        .formRow { 
+            margin-bottom: 10px;
+            margin-left: 10px;
+        }
+        
+
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div id="contactDetails">
+        <h2>Contact details</h2>
+        <form method="post">
+            <div class="formRow">
+                <label for="contactName">Contact name</label>
+                <input name="contaceName" autofocus="on" id="contaceName" type="text"/>
+            </div>
+            <div class="formRow">
+                <label for="phoneName">Phone number</label>
+                <input name="phoneName" placeholder="Include area Code" id="contaceName" type="text"/>
+            </div>
+            <div class="formRow">
+                <label for="emailAddress">Email address</label>
+                <input name="emailAddress" autocomplete="off" id="emailAddress" type="text">
+            </div>
+            <div class="formRow">
+                <label for="companyName">Company name</label>
+                <select name="companyName" id="companyName">
+                   <option value="-1">Please select</option>     
+                   <option value="1">ABC Incorporated</option>     
+                   <option value="2">XZY Ltd</option>     
+                   <option value="3">ACME iInternational</option>     
+                </select>
+            </div> 
+            <div class="formRow">
+                <label for="notes">Notes</label>
+                <textarea cols="40" rows="6" name="notes"></textarea>
+            </div>
+            <div class="formRow">
+                <label for="lastContacted">Last Contacted</label>
+                <input name="lastContacted" id="lastContacted" type="date"/>
+            </div>
+            <div class="formRow">
+                <label for="companies"> Company name</label>
+                <input list="companies" name="companyName">
+                <datalist id="companies">
+                    <option value="ABC Incorporated">   
+                    <option value="XZY Ltd"></option>    
+                    <option value="ACME iInternational"></option>    
+                </datalist>
+            </div>
+            <div class="formRow">
+                <label for="newsletter">Subcribe to newsletter?</label>
+                <input type="checkbox">    
+            </div>
+            <div class="formRow">
+                <label for="gender">Male</label>
+                <input type="radio" value="Male">    
+                <label for="gender">Female</label>
+                <input type="radio" value="Female">    
+            </div>
+
+        </form>
+    
+    </div>
+
+</body>
+</html>

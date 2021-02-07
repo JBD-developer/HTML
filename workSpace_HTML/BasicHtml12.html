@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .box {
+            height: 200px;
+            width : 200px;
+            display: inline-block;
+            border :1px solid  black;
+        }
+        .sub-box {
+            height : 200px ; 
+            width : 400px;
+            border: 1px dotted black;
+            text-align: center;  
+        }
+    </style>
+    <script type="text/javaScript">
+        function startDragging(e){
+            e.dataTransfer.setData("Color", e.target.style.background);
+            e.target.style.opacity = 0.3;
+        }
+
+        function setBorderSize(e, size){
+            e.currentTarget.style.border = size + " solid black" ;
+        }
+
+        function allowDrop(e){
+            e.preventDefault();
+        }
+
+        function drop(e){
+            var color = e.dataTransfer.getData("Color", e.target.style.background); 
+            e.currentTarget.style.background = color ; 
+            setBorderSize(e, '2px');
+        }
+
+        function dragEnded(e){
+            e.target.style.opacity =1.0;
+            console.log(click);
+        }
+        
+        function allowSubDrop(e) {
+            e.stopPropagation(); 
+            e.preventDefault();
+        }
+        function subDragStart(e) {
+            e.dataTransfer.setData("text", e.target.textContent);
+            console.log(e.target.texContent);
+        }
+        function subDrop(e) {
+            var message = e.dataTransfer.getData("text");
+            e.target.textContent = message;
+            console.log(message);
+        }
+        
+
+
+    </script>
+    <title>Document</title>
+
+</head>
+<body>
+    <div ondragend="dragEnded(event)" ondragstart="startDragging(event)" draggable="true" class="box" style="background:red"></div>
+    <div ondragend="dragEnded(event)" ondragstart="startDragging(event)" draggable="true" class="box" style="background:green"></div>
+    <div ondragend="dragEnded(event)" ondragstart="startDragging(event)" draggable="true" class="box" style="background:blueviolet"></div>
+    <div ondragend="dragEnded(event)" ondragstart="startDragging(event)" draggable="true" class="box" style="background:blue"></div>
+    <p>
+    <div class="box" ondrop="drop(event)" ondragover="allowDrop(event)" ondragenter="setBorderSize(event, '4px')" ondragleave="setBorderSize(event, '2px')"></div>
+    <div class="box" ondrop="drop(event)" ondragover="allowDrop(event)" ondragenter="setBorderSize(event, '4px')" ondragleave="setBorderSize(event, '2px')"></div>
+    <div class="box" ondrop="drop(event)" ondragover="allowDrop(event)" ondragenter="setBorderSize(event, '4px')" ondragleave="setBorderSize(event, '2px')"></div>
+    <div class="box" ondrop="drop(event)" ondragover="allowDrop(event)" ondragenter="setBorderSize(event, '4px')" ondragleave="setBorderSize(event, '2px')"></div>
+
+    <p>
+    <div class="sub-box" ondrop="subDrop(event)" ondragover="allowSubDrop(event)"> Drag something onto me</div>
+        <h1 draggable="true" ondragstart="subDragStart(event)">I am a header 1 tag</h1>
+        <h3 draggable="true" ondragstart="subDragStart(event)">I am a header 3 tag</h3>
+        <p draggable="true" ondragstart="subDragStart(event)">I am a p tag </p>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .box {
+            height: 200px;
+            width: 200px;
+            display: inline-block;    
+        }
+        /* 
+        #middleBox {
+            position: relative;
+            top:50px; 
+            left :50px;
+        } 
+        */
+        #middleBox {
+            position: absolute;
+            top:150px; 
+            left :150px;
+        } 
+    </style>
+    <title>Position</title>
+</head>
+<body>
+    <div class="box" style="background: red;"></div>
+    <div class="box" id="middleBox" style="background: blue;"></div>
+    <div class="box" id="lastBox" style="background: green;"></div>
+</body>
+</html>

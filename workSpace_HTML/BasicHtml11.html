@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Validation</title>
+    <style>
+        .validated :invalid {
+            background: #fac3c9;
+        }
+        
+        .validated :valid {
+            background: #BDF048;
+        }
+        
+    </style>
+</head>
+<body>
+    <form method="post">
+        <label for="contactName">Contact name</label>
+        <input id="contactName" required autofocus autocomplete="off" name="Contactname" id="Contactname" type="text"
+         class="validated"/>
+        <label for="contactName">Phone number</label>
+        <input id="contactName" required autofocus autocomplete="off" name="Phonenumber" id="Phonenumber"type="text"
+        class="validated"/>
+        <label for="contactName">Mail address</label>
+        <input id="contactName" required autofocus autocomplete="off" name="Mailaddress" id="Mailaddress" type="text" 
+        class="validated"/>
+    </form>
+    
+</body>
+</html>
